@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>这里是派派~！</title>
+<meta name = "viewport" content="width=device-width,initial-scale=1">
+<style>
+body {
+	margin: 0;
+}
+/* 头部样式 */
+#header {
+  background-image: url("./头部背景.jpg");
+  background-position:right bottom,left top;
+  background-repeat:no-repeat,repeat;
+  background-size:cover;
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* 导航条 */
+.topnav{
+	overflow:hidden;
+	background-color:#bcddff;
+}
+
+/* 导航链接 */
+.topnav a {
+	float: left;
+	display: block;
+	color: #6bb4ff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: underline;
+	/*添加圆角*/
+	border:2px solid #a1a1a1;
+	border-radius :25px;
+}
+
+/*链接 - 修改颜色*/
+.topnav a:hover{
+	background-color:#e5c7ff;
+	color:black;
+}
+
+
+/*人物卡片*/
+.profile{
+	float:left;
+	background-color:e5c0f0;
+	text-decoration:none;
+	padding :10px;
+}
+
+
+/*创建不相等的列*/
+.column{
+	float:left;
+	padding:10px;
+		
+	background-color:e5c0f0;
+	width = 33%;
+}
+
+
+
+/*列后清除浮动*/
+.row:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/*小于600px改为上下*/
+@media screen and (max-width:600px){
+.column.side,.column.middle{width:100%}
+
+}
+
+/*底部*/
+.footer{
+	background-color: #fff6bc;
+	padding: 10px;
+	text-align:center;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>派派的私人度假岛屿</h1>
+</div>
+
+<div class = "topnav">
+
+	<a href="./PaiPaiDeWeb.html">首页</a>
+	<a href="./wallpaperpage.html">壁纸收藏</a>
+	<a href="./headimagepage.html">头像收藏</a>
+</div>
+
+<div class = "row">
+	<div class = "profile">
+	<a href="https://www.zhihu.com/people/bo-luo-zha-dan">
+	<img src="https://pic4.zhimg.com/v2-e1818433dc6f982ca9fdb73de8bf66bd_xll.jpg" width=100></a>
+	</div>
+	<div class = "profile">
+	<a href="https://www.zhihu.com/people/bo-luo-zha-dan">
+	<p class="profile">我的知乎噢 </p></a>
+	</div>
+</div>
+
+<div>
+	<p>目前还没有什么东西噢，只有一些我私藏的壁纸头像表情包~
+	</p>
+
+</div>
+<div class="footer">
+	<p>下面没有了！</p>
+</div>
+
+
+
+</body>
+</html>
