@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>这里是派派~！</title>
+<meta name = "viewport" content="width=device-width,initial-scale=1">
+<style>
+body {
+	margin: 0;
+}
+/* 头部样式 */
+#header {
+  background-image: url("./头部背景.jpg");
+  background-position:right bottom,left top;
+  background-repeat:no-repeat,repeat;
+  background-size:cover;
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* 导航条 */
+.topnav{
+	overflow:hidden;
+	background-color:#bcddff;
+}
+
+/* 导航链接 */
+.topnav a {
+	float: left;
+	display: block;
+	color: #6bb4ff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: underline;
+	/*添加圆角*/
+	border:2px solid #a1a1a1;
+	border-radius :25px;
+}
+
+/*链接 - 修改颜色*/
+.topnav a:hover{
+	background-color:#e5c7ff;
+	color:black;
+}
+
+
+/*人物卡片*/
+.profile{
+	float:left;
+	background-color:e5c0f0;
+	text-decoration:none;
+	padding :10px;
+}
+
+
+/*创建不相等的列*/
+.column{
+	float:left;
+	padding:10px;
+		
+	background-color:e5c0f0;
+	width = 33%;
+}
+
+
+
+/*列后清除浮动*/
+.row:after{
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/*小于600px改为上下*/
+@media screen and (max-width:600px){
+.column.side,.column.middle{width:100%}
+
+}
+
+/*底部*/
+.footer{
+	background-color: #fff6bc;
+	padding: 10px;
+	text-align:center;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>派派的私人度假岛屿</h1>
+</div>
+
+<div class = "topnav">
+
+	<a href="./PaiPaiDeWeb.html">首页</a>
+	<a href="./wallpaperpage.html">壁纸收藏</a>
+	<a href="./headimagepage.html">头像收藏</a>
+</div>
+
+<div class = "row">
+	<div class = "profile">
+	<a href="https://www.zhihu.com/people/bo-luo-zha-dan">
+	<img src="https://pic4.zhimg.com/v2-e1818433dc6f982ca9fdb73de8bf66bd_xll.jpg" width=100></a>
+	</div>
+	<div class = "profile">
+	<a href="https://www.zhihu.com/people/bo-luo-zha-dan">
+	<p class="profile">我的知乎噢 </p></a>
+	</div>
+</div>
+
+<div>自由电子气
+</div>
+
+<div>
+	<p>
+		自由电子气体热性质
+	</p>
+	<p>
+		T不为0时N个电子本征态的分布不再是简单的泡利不相容原里，而是由费米-狄拉克分布函数给出。
+		全同费米子系统中粒子不可分辨，费米子遵从泡利不相容原理，每一量子态容纳的粒子数不能超过一个。
+		对于粒子数、体积和总能量确定的费米子系统，当温度为T时 ，处在能量为E的量子态上的平均粒子数为
+	</p>
+	<img src="http://latex.codecogs.com/gif.latex?f_i=\frac{1}{e^{(\epsilon_i-\mu)/k_BT}+1}" /> 
+	<p>
+		T趋于0时f在能量小于化学式μ时为1，在大于时为0，此时μ趋于费米能量&epsilon;<sub>0</sub> 
+	</p>
+	<p>
+		因此仅有能量在u附近的电子可以被热激发（其他能量下的分布概率都是1了就确定了嘛(●'◡'●)）
+	</p>
+		<img src="./热激发能量分布.png" width =480>
+	<p>T不为0时自由电子气单位体积内能(即化学式&mu;)可以由费米分布函数给出</p>
+		<img src="http://latex.codecogs.com/gif.latex?\mu; = \frac{2}{V}\Sigma_k \epsilon(k)f_k = \frac{1}{4\pi^3}\int \epsilon(k) f_k dk" />
+	<p>
+		<img src="http://latex.codecogs.com/gif.latex?n = \frac{2}{V}\Sigma_k f_k = \frac{1}{4\pi^3}\int f_k dk" />
+	</p>
+	<p>将对k的积分改为对能量&epsilon;的积分
+	</p>
+	<img src="http://latex.codecogs.com/gif.latex?\mu = \int_0^\inf\epsilon g(\epsilon)f(\epsilon)d\epsilon"/>
+	<p>
+	<img src="http://latex.codecogs.com/gif.latex?n = \int_0^\inf g(\epsilon)f(\epsilon)d\epsilon"/>
+	</p>
+	<p>求和过度为积分的规则为</p>
+		<img src="http://latex.codecogs.com/gif.latex?\frac{1}{V}\Sigma_k F(k)=\frac{1}{8\pi^3}\int F(k)dk" /> 
+	<p>需要计算的积分为</p>
+		<img src="http://latex.codecogs.com/gif.latex?n = \frac{2}{V}\Sigma_k f_k = \frac{1}{4\pi^3}\int \frac{1}{e^{(\epsilon_i-\mu)/k_BT}+1} dk" />
+	<p>有变量k和&epsilon;，可通过前一节中的电子态密度函数g(&epsilon;)联系起来</p>
+	
+	
+	
+	<img src="http://latex.codecogs.com/gif.latex?\psi(\bold{r})=Ce^{i\bold{k}\bold{r}}"/>
+	<img src="http://latex.codecogs.com/gif.latex?C=\frac{1}{\sqrt{V}}"/>
+	<p>带回薛定谔方程可球的能量</p>
+	<img src="http://latex.codecogs.com/gif.latex?\epsilon(\bold{k})=\frac{\hbar^2k^2}{2m}"/>
+	<p>k为波长，由德布罗意关系可求出动量p，继而有电子能量，与刚才的相同＜（＾－＾）＞</p>
+	
+	<p>周期性边界条件</p>
+	<img src="http://latex.codecogs.com/gif.latex?\psi(x+L,y,z)=\psi(x,y,z)"/>
+	<img src="http://latex.codecogs.com/gif.latex?\psi(x,y+L,z)=\psi(x,y,z)"/>
+	<img src="http://latex.codecogs.com/gif.latex?\psi(x,y,z+L)=\psi(x,y,z)"/>
+	<p>代回方程可解得</p>
+	<img src="http://latex.codecogs.com/gif.latex?e^{ik_xL}=e^{ik_yL}=e^{ik_zL}=1"/>
+	<img src="http://latex.codecogs.com/gif.latex?k_x=\frac{2\pi}{L}n_x"/>
+	<img src="http://latex.codecogs.com/gif.latex?k_y=\frac{2\pi}{L}n_y"/>
+	<img src="http://latex.codecogs.com/gif.latex?k_z=\frac{2\pi}{L}n_z"/>
+	<p>得出结论：单电子本征能量取分立值，显然如果以k做空间矢量的话，每两个点之间的距离为2pi/L，则每个允许的波矢k占据的体积</p>
+	<img src="http://latex.codecogs.com/gif.latex?\Delta k=(2\pi/L)^3"/>
+	<p>k空间的态密度可以用1除以每个点在k空间的体积</p>
+	<img src="http://latex.codecogs.com/gif.latex?\frac{1}{\Delta k}=\frac{V}{8\pi^3}"/>
+	<img src="./固体物理/k空间态密度.png" width = 480/>
+	<p>由泡利不相容原理，每个许可的k态上只有两个不同的自选投影可取</p>
+	<p>N个电子从能量最低的k=0开始，也就是k空间的原点，能量从低到高逐渐填充，最后占据的区域形成一个费米球，半径为费米波矢</p>
+	<p>
+		在费米球中的态的总数应该等于电子总数目。态总数为2（两个自旋态）乘态密度乘费米球体积。
+	</p>
+	<img src="http://latex.codecogs.com/gif.latex?2\times \frac{V}{8\pi^3}\times \frac{4}{3}\pi k_{F}^{3}=N" /> 
+	<p>自由电子气的总能量为费米球内所有单电子能量和</p>
+	<img src="http://latex.codecogs.com/gif.latex?\frac{\varepsilon}{V}=\frac{2}{V}\Sigma_{k<k_F}\frac{\hbar^2k^2}{2m}" />
+	<p>把k空间的态密度代入，再取V->无穷大的极限，求和变为积分</p>
+	<img src="http://latex.codecogs.com/gif.latex?\frac{\varepsilon}{V}=\frac{1}{4\pi^3}\int_{k<k_F}\frac{\hbar^2k^2}{2m}dk=\frac{1}{\pi^2}\frac{\hbar^2k_{F}^{5}}{10m}"/>
+	<p 可计算得电子平均能量为3/5倍的费米能 />
+	<img src="http://latex.codecogs.com/gif.latex?\frac{\varepsilon}{N}=\frac{3}{5}\epsilon"/>
+	<p &epsilon到&epsilon+d&epsilon的球壳中，可用自旋态2乘态密度再乘dk计算允许的电子态数/>
+	<img src="http://latex.codecogs.com/gif.latex?dN=2\frac{V}{8\pi^3}4\pik^2dk"/>
+	<img src="http://latex.codecogs.com/gif.latex?\epsilon = \frac{\hbar^2k^2}{2m}"/>
+	<p 则有/>
+	<img src="http://latex.codecogs.com/gif.latex?dN=V \frac{1}{\pi^2\hbar^3}(2m^3\epsilon)^{1/2} d\epsilon"/>
+	<p 电子态密度函数为/>
+	<img src="http://latex.codecogs.com/gif.latex?g(\epsilon)=\frac{1}{\pi^2\hbar^3}(2m^3\epsilon)^{1/2}" />
+
+	<p 与经典态不同，经典态下平均能量为/>
+	<img src="http://latex.codecogs.com/gif.latex?(3/2)k_BT"/>
+
+</div>
+<div class="footer">
+	<p>下面没有了！</p>
+</div>
+
+
+
+</body>
+</html>

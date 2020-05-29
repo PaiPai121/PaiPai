@@ -44,39 +44,38 @@ body {
 	color:black;
 }
 
+/*列容器*/
+.row{
+	display:flex;/*容器类型*/
+	flex-direction:row;/*按行排列*/
+	flex-warp:warp;/*可换行*/
+}
 
-/*人物卡片*/
+/*左侧栏，我*/
 .profile{
-	float:left;
-	background-color:e5c0f0;
-	text-decoration:none;
-	padding :10px;
+	flex:20%;/*占比*/
+	background-color:#00CED1;
+	padding:20px;/*间隔*/
+}
+
+/*中间大栏*/
+.main{
+	flex:80%;
+	background-color:#F0FFFF;
+	padding:40px;
+	
 }
 
 
-/*创建不相等的列*/
-.column{
-	float:left;
-	padding:10px;
-		
-	background-color:e5c0f0;
-	width = 33%;
+/*测试图片*/
+.fakeimg{
+	background-color:#aaa;
+	width:100%;
+	padding:20px;
 }
 
 
 
-/*列后清除浮动*/
-.row:after{
-	content:"";
-	display:table;
-	clear:both;
-}
-
-/*小于600px改为上下*/
-@media screen and (max-width:600px){
-.column.side,.column.middle{width:100%}
-
-}
 
 /*底部*/
 .footer{
@@ -84,6 +83,17 @@ body {
 	padding: 10px;
 	text-align:center;
 }
+
+.littletitle{
+	float: middle;
+	display: block;
+	color: #6bb4ff;
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: bold;
+}
+
+
 
 
 </style>
@@ -94,34 +104,56 @@ body {
   <h1>派派的私人度假岛屿</h1>
 </div>
 
+
+<!导航条部分>
 <div class = "topnav">
 
 	<a href="./PaiPaiDeWeb.html">首页</a>
 	<a href="./wallpaperpage.html">壁纸收藏</a>
 	<a href="./headimagepage.html">头像收藏</a>
+	<a href="./headimagepage.html">一些学习资料</a>
 </div>
 
+
+<!整个列大块>
 <div class = "row">
+	<!简介部分>
 	<div class = "profile">
-	<a href="https://www.zhihu.com/people/bo-luo-zha-dan">
-	<img src="https://pic4.zhimg.com/v2-e1818433dc6f982ca9fdb73de8bf66bd_xll.jpg" width=100></a>
+		<a href="https://www.zhihu.com/people/bo-luo-zha-dan">
+		<img src="https://pic4.zhimg.com/v2-e1818433dc6f982ca9fdb73de8bf66bd_xll.jpg" width=90%></a>
+		<h2 href="https://www.zhihu.com/people/bo-luo-zha-dan">
+		<p>是我噢！ </p></h2>
+		<h3>关于我</h3>
+		<p>微信暂无</p>
+		<p>微博暂无</p>
+		<p>QQ暂无</p>
+		<h4>一个整日肥宅的油腻中年</h4>
 	</div>
-	<div class = "profile">
-	<a href="https://www.zhihu.com/people/bo-luo-zha-dan">
-	<p class="profile">我的知乎噢 </p></a>
+	<!内容部分>
+	<div class = "main">
+		<a href="./wallpaperpage.html">
+			<h2 class ="littletitle">我的壁纸收藏</h2>
+			<img class = "littletitle" id = "picwall" src="./壁纸/非游戏类/1.jpg" width = 60%>
+		</a>
+		
+		<a href="./headimagepage.html">
+			<h2 class ="littletitle">我的头像收藏</h2>
+			<img class="littletitle" id = "picface" src="./头像/1.jpg" width = 60%>
+		</a>
+		
 	</div>
 </div>
 
-<div>
-	<p>目前还没有什么东西噢，只有一些我私藏的壁纸头像表情包~
-	</p>
 
-</div>
 <div class="footer">
-	<p>下面没有了！</p>
+	<p>派派！～(￣▽￣～)~</p>
 </div>
-
-
+<script>
+	var url1= "./壁纸/非游戏类/"+parseInt(Math.random()*10).toString()+".jpg"
+	var url2= "./头像/"+parseInt(Math.random()*10).toString()+".jpg"
+	document.getElementById("picwall").src = url1;
+	document.getElementById("picface").src = url2;
+</script>
 
 </body>
 </html>
