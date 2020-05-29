@@ -44,6 +44,29 @@ body {
 	color:black;
 }
 
+/*列容器*/
+.row{
+	display:flex;/*容器类型*/
+	flex-direction:row;/*按行排列*/
+	flex-warp:warp;/*可换行*/
+}
+
+
+
+/*中间大栏*/
+.main{
+	flex:80%;
+	background-color:#F0FFFF;
+	padding:40px;
+	
+}
+
+/*放图片的地方*/
+.img-box{
+	width:30%
+	background-color:#F0F8FF;
+	height:width
+}
 
 
 
@@ -55,6 +78,17 @@ body {
 	text-align:center;
 }
 
+.littletitle{
+	float: middle;
+	display: block;
+	color: #6bb4ff;
+	text-align: left;
+	padding: 14px 16px;
+	text-decoration: bold;
+}
+
+
+
 
 </style>
 </head>
@@ -64,30 +98,95 @@ body {
   <h1>派派的私人度假岛屿</h1>
 </div>
 
+
+<!导航条部分>
 <div class = "topnav">
+
 	<a href="./PaiPaiDeWeb.html">首页</a>
 	<a href="./wallpaperpage.html">壁纸收藏</a>
 	<a href="./headimagepage.html">头像收藏</a>
+	<a href="./learningpage.html">一些学习资料</a>
 </div>
 
 
-<div class = "pic">
-	<img src ="./头像/1.jpg" width = 480>
-	<img src ="./头像/2.jpg" width = 480>
-	<img src ="./头像/3.jpg" width = 480>
-	<img src ="./头像/4.jpg" width = 480>
-	<img src ="./头像/5.jpg" width = 480>
+<!整个列大块>
+<div class = "row">
+	<!内容部分>
+	<div class = "main" id = "pics">
+		<a href="./wallpaperpage.html">
+			<h2 class ="littletitle">我的壁纸收藏</h2>
+			<img class = "littletitle" id = "picwall" src="./壁纸/非游戏类/1.jpg" width = 60%>
+		</a>		
+	</div>
+	<div class = "main" id = "pics2">
+		<a href="./wallpaperpage.html">
+			<h2 class ="littletitle">我的壁纸收藏</h2>
+			<img class = "littletitle" id = "picwall" src="./壁纸/非游戏类/1.jpg" width = 60%>
+		</a>		
+	</div>
 </div>
-
-
-
-
 
 
 <div class="footer">
-	<p>下面没有了！</p>
+	<p>派派！～(￣▽￣～)~</p>
 </div>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+	var url1= "./壁纸/非游戏类/"
+	var url2= "./壁纸/游戏类/"
+	var url3= "./头像/"
+	
+/*失败了
+	function searchImgs(path){
+	imgFiles = ""
+		var fso = new ActiveXObject("Scripting.FileSystemObject");//创建FileSystemObject对象
+		if(!fso.FolderExists(path))//检查路径是否存在
+		{
+			alert("<"+path+">路径不存在或不能访问，我也没有办法啊(手动笑哭)")
+			fso = null;
+			return;
+		}
+		var objFolder = fso.GetFolder(tbsource);//获取文件夹？
+		var colFiles = new Enumerator(objFolder.Files);//枚举文件列表
+		var re_inf1 = /\.(gif|jpg|jpeg|bmp|png)$/;//验证扩展名的正则表达式
+		
+		for(;!colFiles.atEnd();colFiles.moveNext())//遍历文件
+		{
+			var objFile = colFiles.item();
+			if(re_inf1.test(objFile.Name.toLowerCase()))//判断扩展名，全部改为小写
+			{
+				imgFiles=imgFiles + "<img src='"+path+"/"+objFile.Name+"'>";
+			}
+		}
+		document.getElementById("pics").innerHTML=imgFiles;
+	}
+*/
+	var lefta='<a href="';
+	var lefta2 = '">';
+	var righta = '</a>';
 
+	var i = 0;
+	imgFiles = ""
+	do{
+		u = url3+i.toString()+".jpg"
+		imgFiles=imgFiles +lefta+u+lefta2+ "<img src='"+u+"'width = 30%>"+righta;
+		i+=1;
+
+	}
+	while(i<13)
+	document.getElementById("pics").innerHTML=imgFiles;
+	imgFiles="";
+	
+	do{
+		u = url3+i.toString()+".jpg"
+		imgFiles=imgFiles +lefta+u+lefta2+ "<img src='"+u+"'width = 30%>"+righta;
+		i+=1;
+
+	}
+	while(i<27)
+	document.getElementById("pics2").innerHTML=imgFiles;
+
+</script>
 
 </body>
 </html>

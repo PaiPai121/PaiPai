@@ -18,7 +18,8 @@ def test(path):
             print(extension_name)
             if extension_name[1] in names:
                 print(path+"\\" + str(i)+extension_name[1])
-                os.rename(file_path, path + "\\" + str(i) + extension_name[1])  # 对文件进行重命名
+                #os.rename(file_path, path + "\\" + str(i) + extension_name[1])  # 对文件进行重命名
+                os.rename(file_path, path + "\\" + str(i) + '.jpg') 
                 i+=1
                 print(i)
 
